@@ -11,7 +11,9 @@ export class ShoppingApp extends Component {
 
     state = {
         items: null,
-        filterBy: null
+        filterBy: null,
+        page:1,
+        itemsPerPage:6
     }
 
     componentDidMount() {
@@ -25,6 +27,7 @@ export class ShoppingApp extends Component {
 
     async loadItems() {
         const items = await itemService.getItems(this.state.filterBy)
+        items.splice()
         this.setState({ items })
     }
 

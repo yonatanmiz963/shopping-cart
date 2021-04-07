@@ -1,3 +1,5 @@
+import { storageService } from "./storageService";
+
 export const itemService = {
   getItems,
   getCartItems,
@@ -8,7 +10,7 @@ export const itemService = {
   addToCart
 }
 
-var cartItems = null;
+var cartItems = storageService.load('cartItems') || [];
 const items = [
   {
     "_id": 1,
@@ -204,6 +206,7 @@ function addToCart(item) {
   console.log('item:', item)
   if (!cartItems) cartItems = []
   cartItems.push(item);
+  storageService.store('cartItems', cartItems)
   return Promise.resolve(item);
 }
 
