@@ -44,7 +44,6 @@ export class ShoppingApp extends Component {
             <div className="item-page">
                 <div className="filter-wrapper flex justify-center align-center">
                     <ItemFilter onFilter={this.onFilter} />
-                    <Link className="add-btn" to="/item/edit">Add item</Link>
                 </div>
                 <ItemList onAddToCart={this.onAddToCart} onSelectitem={onSelectitem} items={items} />
             </div>

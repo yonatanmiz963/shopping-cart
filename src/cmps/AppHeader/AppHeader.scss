@@ -1,32 +1,66 @@
 @import "../../assets/styles/setup/variables";
 .app-header {
     background-color: rgb(209, 209, 209);
-    padding: 0px 80px;
-    height: 70px;
+    height: 45px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    font-size: 16px;
+    
     .header-nav {
-        list-style-type: none;
+        width: 100%;
+        height: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        >* {
-            margin-inline-end: 10px;
-        }
+        padding: 0px 80px;
+        font-size: 16px;
+       
+    
+
         .active-nav {
             font-weight: bold;
         }
-        li {
+
+        .cart-wrapper a {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .cart-icon {
+                font-size: 16px;
+                margin-inline-end: 5px;
+            }
+        }
+
+        .home-wrapper {
+            font-size: 16px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            height: 100%;
+
+            > * {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                border-right: 1px solid gainsboro;
+                padding: 0px 10px;
+            }
+
+            > *:hover {
+                background-color: #9c9c9c;
+                cursor: pointer;
+            }
         }
     }
-    .logo-wrapper {
-        h3 {
-            font-family: roboto-regular, sans-serif;
-            margin: 10px;
-        }
+
+
+    a { 
+        text-decoration: none;
+        color: unset;
+    }
+    p {
+        margin: 0;
     }
 }
