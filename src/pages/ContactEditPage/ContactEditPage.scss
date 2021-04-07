@@ -1,0 +1,51 @@
+.contact-edit {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 300px;
+    margin: 0px auto;
+
+    &>* {
+        margin: 20px 0px;
+    }
+
+    .name-wrapper, .phone-wrapper, .email-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        input {
+            width: 220px;
+            padding: 5px;
+        }
+        label {
+            margin-inline-end: 5px;
+        }
+    }
+    button {
+        background-color: transparent;
+        justify-self: center;
+        align-self: center;
+        font-size: 16px;
+        font-family: roboto-regular, sans-serif;
+    }
+    button:hover {
+        cursor: pointer;
+        font-weight: 700;
+    }
+}
+
+.btn-wrapper {
+    height: 100px;
+    width: 100%;
+    padding: 0px 80px;
+
+    > *:hover {
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .delete-btn {
+        font-size: 16px;
+        background-color: transparent;
+    }
+}
