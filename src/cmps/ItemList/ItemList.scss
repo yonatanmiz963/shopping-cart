@@ -9,6 +9,11 @@
     grid-auto-rows: minmax(200px, auto);
     align-items: center;
     justify-content: center;
+
+    .item-preview-li {
+        align-self: center;
+        justify-self: center;
+    }
 }
 
 @media (max-width: 940px) {
