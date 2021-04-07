@@ -2,18 +2,17 @@
 import { withRouter } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import './AppHeader.scss'
-
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 const _AppHeader = (props) => {
 
     return (
-       <div className="app-header flex space-between align-center" >
-           <div className="logo-wrapper">
-               <h3>Mister-bitCoin</h3>
+       <div className="app-header flex space-between" >
+           <div className="logo-wrapper flex">
+            <h3>Shop</h3>
            </div>
             <ul className="header-nav flex justify-center align-center">
-                <li><NavLink to="/contact" activeClassName="active-nav">Contacts</NavLink></li>
-                <li><NavLink to="/statistic" activeClassName="active-nav">Statistics</NavLink></li>
                 <li><NavLink exact to="/" activeClassName="active-nav">Home</NavLink></li>
+                <li class="shopping-cart"> <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon> <NavLink to="/cart" activeClassName="active-nav">Cart</NavLink></li>
             </ul>
         </div>
     )

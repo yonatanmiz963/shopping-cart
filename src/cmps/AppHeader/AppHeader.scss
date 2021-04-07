@@ -1,26 +1,32 @@
 @import "../../assets/styles/setup/variables";
-
-
 .app-header {
-    background-color: $clr2;
+    background-color: rgb(209, 209, 209);
     padding: 0px 80px;
-    height: 50px;
-
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     .header-nav {
         list-style-type: none;
-
-        > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >* {
             margin-inline-end: 10px;
         }
-
         .active-nav {
             font-weight: bold;
         }
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
-
     .logo-wrapper {
         h3 {
-            font-family: astro-space, sans-serif;
+            font-family: roboto-regular, sans-serif;
+            margin: 10px;
         }
     }
 }
