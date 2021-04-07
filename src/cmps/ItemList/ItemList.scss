@@ -3,8 +3,27 @@
     flex-wrap: wrap;
     list-style: none;
     padding: 0px 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+    align-items: center;
+    justify-content: center;
 
     .item-preview-li {
-        margin: 15px;
-    } 
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 940px) {
+    .item-list {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 460px) {
+    .item-list {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
 }

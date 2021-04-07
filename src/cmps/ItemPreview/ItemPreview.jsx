@@ -29,7 +29,6 @@ export function ItemPreview({ item, onAddToCart }) {
                     <CardMedia
                         className={classes.media}
                         image={item.image}
-                        title="Contemplative Reptile"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -41,7 +40,7 @@ export function ItemPreview({ item, onAddToCart }) {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>                   
-                    <Button onClick={() => onAddToCart(item)} size="small" color="primary">
+                    <Button onClick={() => onAddToCart(item)} size="small" color="primary" className="add-to-cart-btn">
                         Add To Cart
               </Button>
                 </CardActions>
