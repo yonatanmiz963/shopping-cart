@@ -11,8 +11,8 @@ const _AppHeader = (props) => {
                <h3>Mister-bitCoin</h3>
            </div>
             <ul className="header-nav flex justify-center align-center">
-                <li><NavLink to="/contact" activeClassName="active-nav">Contacts</NavLink></li>
-                <li><NavLink to="/statistic" activeClassName="active-nav">Statistics</NavLink></li>
+                <li><NavLink to="/cart" activeClassName="active-nav">My Cart</NavLink></li>
+                {/* <li><NavLink to="/statistic" activeClassName="active-nav">Statistics</NavLink></li> */}
                 <li><NavLink exact to="/" activeClassName="active-nav">Home</NavLink></li>
             </ul>
         </div>

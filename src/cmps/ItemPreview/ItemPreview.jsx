@@ -1,7 +1,4 @@
 
-// import { Component } from 'react'
-// import { Link } from 'react-router-dom'
-
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -23,7 +20,7 @@ const useStyles = makeStyles({
 });
 
 
-export function ItemPreview({ item }) {
+export function ItemPreview({ item, onAddToCart }) {
     const classes = useStyles();
     return (
         <div className="item-preview">
@@ -39,7 +36,7 @@ export function ItemPreview({ item }) {
                             {item.title}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            {'$'+item.price}
+                            {'$' + item.price}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -47,16 +44,11 @@ export function ItemPreview({ item }) {
                     <Button size="small" color="primary">
                         Add to cart
               </Button>
+                    <Button onClick={() => onAddToCart(item)} size="small" color="primary">
+                        Add To Cart
+              </Button>
                 </CardActions>
             </Card>
         </div>
-        // <div className="item-preview flex align-center">
-        //     <img src={item.image} alt="item" />
-        //     <h3>{item.title}</h3>
-        //     <h3>{item.price}</h3>
-        //     <h3>{item.description}</h3>
-        //     <Link to={'/item/' + item._id}></Link>
-
-        // </div>
     )
 }
