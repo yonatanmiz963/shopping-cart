@@ -5,16 +5,17 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import './CartPreview.scss'
 
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
+  // bullet: {
+  //   display: 'inline-block',
+  //   margin: '0 2px',
+  //   transform: 'scale(0.8)',
+  // },
   title: {
     fontSize: 14,
   },
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
 
 export function CartPreview({item}) {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+  // const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.root}>
@@ -36,7 +37,7 @@ export function CartPreview({item}) {
           {item.title}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-        {item.price}
+        ${item.price}
         </Typography>
         {/* <Typography variant="body2" component="p">
           well meaning and kindly.

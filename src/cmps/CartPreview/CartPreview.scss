@@ -1,1 +1,15 @@
-.cartPreview {}
+    .cart-list-items {
+        list-style: none;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: space-between;
+        li {
+            margin: 10px;
+        }
+    }
+    
+    .cart-preview-li:hover {
+        cursor: pointer;
+        filter: brightness(90%);
+    }
