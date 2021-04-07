@@ -1,0 +1,1 @@
+export { ShoppingApp } from './ShoppingApp'

@@ -1,4 +1,9 @@
+import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+
 import './App.css';
+import { AppHeader } from './cmps/AppHeader/AppHeader';
+// import { Cart } from './pages/Cart'
+import { ShoppingApp } from './pages/ShoppingApp'
 
 function App() {
   return (
@@ -6,11 +11,8 @@ function App() {
     <div className="App">
       <AppHeader />
       <Switch>
-        <Route component={ContactEditPage} path='/contact/edit/:id?' />
-        <Route component={ContactDetailsPage} path='/contact/:id' />
-        <Route component={StatisticPage} path='/statistic' />
-        <Route component={ContactPage} path='/contact' />
-        <Route component={HomePage} path='/' />
+        {/* <Route component={Cart} path='/cart' /> */}
+        <Route component={ShoppingApp} path='/' />
       </Switch>
     </div>
   </Router>

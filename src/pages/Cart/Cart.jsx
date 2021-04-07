@@ -6,7 +6,7 @@ import Coins from '../../assets/imgs/coins.png';
 import Bitcoin from '../../assets/imgs/bitcoin.png';
 import './HomePage.scss'
 
-export class HomePage extends Component {
+export class Cart extends Component {
 
     state = {
         user: null,

@@ -1,9 +1,9 @@
 
 import { Component } from 'react'
 
-import './ContactFilter.scss'
+import './ItemFilter.scss'
 
-export class ContactFilter extends Component {
+export class ItemFilter extends Component {
 
     state = {
         term: '',
@@ -20,7 +20,7 @@ export class ContactFilter extends Component {
         const { term } = this.state
         return (
             <div>
-                <form className="contact-filter flex align-center" onSubmit={(ev) => ev.preventDefault()}>
+                <form className="item-filter flex align-center" onSubmit={(ev) => ev.preventDefault()}>
                     <label htmlFor="term">Search</label>
                     <input autoFocus type="text" id="term" name="term" value={term} onChange={this.handleChange} />
                 </form>

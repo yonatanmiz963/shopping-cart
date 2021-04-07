@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { contactService } from '../../services/contactService'
+import { contactService } from '../../services/itemService'
 import './ContactEditPage.scss'
 
 export class ContactEditPage extends Component {
