@@ -17,6 +17,8 @@
     }
     h2 {
         font-size: 1.4rem;
+        overflow: hidden;
+        max-height: 60px;
     }
     .add-to-cart-btn {
         padding: 5px 12px !important;
