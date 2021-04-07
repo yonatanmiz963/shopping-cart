@@ -1,11 +1,14 @@
 export const itemService = {
   getItems,
+  getCartItems,
   getItemById,
   deleteItem,
   saveItem,
-  getEmptyItem
+  getEmptyItem,
+  addToCart
 }
 
+var cartItems = null;
 const items = [
   {
     "_id": 1,
@@ -172,10 +175,10 @@ const items = [
 
 function sort(arr) {
   return arr.sort((a, b) => {
-    if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()) {
+    if (a.title.toLocaleLowerCase() < b.title.toLocaleLowerCase()) {
       return -1;
     }
-    if (a.name.toLocaleLowerCase() > b.name.toLocaleLowerCase()) {
+    if (a.title.toLocaleLowerCase() > b.title.toLocaleLowerCase()) {
       return 1;
     }
 
@@ -186,12 +189,22 @@ function sort(arr) {
 function getItems(filterBy = null) {
   return new Promise((resolve, reject) => {
     var itemsToReturn = items;
-    // if (filterBy && filterBy.term) {
-    //   itemsToReturn = filter(filterBy.term)
-    // }
-    // resolve(sort(itemsToReturn))
-    resolve(itemsToReturn)
+    if (filterBy && filterBy.term) {
+      itemsToReturn = filter(filterBy.term)
+    }
+    resolve(sort(itemsToReturn))
   })
+}
+
+function getCartItems() {
+  return Promise.resolve(cartItems);
+}
+
+function addToCart(item) {
+  console.log('item:', item)
+  if (!cartItems) cartItems = []
+  cartItems.push(item);
+  return Promise.resolve(item);
 }
 
 function getItemById(id) {
@@ -244,9 +257,10 @@ function getEmptyItem() {
 function filter(term) {
   term = term.toLocaleLowerCase()
   return items.filter(item => {
-    return item.name.toLocaleLowerCase().includes(term) ||
-      item.phone.toLocaleLowerCase().includes(term) ||
-      item.email.toLocaleLowerCase().includes(term)
+    return item.title.toLocaleLowerCase().includes(term)
+    //  ||
+    // item.phone.toLocaleLowerCase().includes(term) ||
+    // item.email.toLocaleLowerCase().includes(term)
   })
 }
 
