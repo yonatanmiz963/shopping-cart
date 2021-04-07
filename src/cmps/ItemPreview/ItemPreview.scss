@@ -8,14 +8,14 @@
     .MuiButtonBase-root {
         padding: 16px;
         padding-bottom: 0;
-        .add-to-cart-btn {
-            padding: 0 !important;
-        }
     }
     .MuiCardContent-root {
         padding: 10px;
     }
     h2 {
         font-size: 1.4rem;
+    }
+    .add-to-cart-btn {
+        padding: 5px 12px !important;
     }
 }
