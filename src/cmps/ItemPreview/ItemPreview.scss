@@ -1,5 +1,8 @@
 @import "../../assets/styles/setup/variables";
 .item-preview {
+    align-self: center;
+    justify-self: center;
+    min-width: 350px;
     .MuiCardMedia-root {
         background-size: contain;
         // padding: 0 16px;

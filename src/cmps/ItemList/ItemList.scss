@@ -1,18 +1,23 @@
+.list-container {
+    padding: 0 auto;
+}
+
 .item-list {
     padding: 20px;
     flex-wrap: wrap;
     list-style: none;
-    padding: 0px 80px;
+    // padding: 0px 80px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 350px);
     gap: 20px;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: auto;
     align-items: center;
     justify-content: center;
-
     .item-preview-li {
         align-self: center;
         justify-self: center;
+        min-width: 350px;
+        height: max-content;
     }
 }
 
