@@ -1,2 +1,21 @@
 @import "../../assets/styles/setup/variables";
-.item-preview {}
+.item-preview {
+    .MuiCardMedia-root {
+        background-size: contain;
+        // padding: 0 16px;
+        // padding: 10px;
+    }
+    .MuiButtonBase-root {
+        padding: 16px;
+        padding-bottom: 0;
+        .add-to-cart-btn {
+            padding: 0 !important;
+        }
+    }
+    .MuiCardContent-root {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}
