@@ -1,11 +1,14 @@
 export const itemService = {
   getItems,
+  getCartItems,
   getItemById,
   deleteItem,
   saveItem,
-  getEmptyItem
+  getEmptyItem,
+  addToCart
 }
 
+var cartItems = null;
 const items = [
   {
     "_id": 1,
@@ -192,6 +195,17 @@ function getItems(filterBy = null) {
     // resolve(sort(itemsToReturn))
     resolve(itemsToReturn)
   })
+}
+
+function getCartItems() {
+  return Promise.resolve(cartItems);
+}
+
+function addToCart(item) {
+  console.log('item:', item)
+  if (!cartItems) cartItems = []
+  cartItems.push(item);
+  return Promise.resolve(item);
 }
 
 function getItemById(id) {

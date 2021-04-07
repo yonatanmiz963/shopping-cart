@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 });
 
 
-export function ItemPreview({ item }) {
+export function ItemPreview({ item,onAddToCart }) {
     const classes = useStyles();
 
 
@@ -52,6 +52,9 @@ export function ItemPreview({ item }) {
               </Button>
                 <Button size="small" color="primary">
                     Learn More
+              </Button>
+                <Button onClick={()=>onAddToCart(item)} size="small" color="primary">
+                    Add To Cart
               </Button>
             </CardActions>
         </Card>

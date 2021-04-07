@@ -33,6 +33,10 @@ export class ShoppingApp extends Component {
         this.setState({ filterBy }, this.loadItems)
     }
 
+    onAddToCart = (item) => {
+        itemService.addToCart(item);
+    }
+
     render() {
         const { items, onSelectitem } = this.state
         if (!items) return <div>Loading...</div>
@@ -42,7 +46,7 @@ export class ShoppingApp extends Component {
                     <ItemFilter onFilter={this.onFilter} />
                     <Link className="add-btn" to="/item/edit">Add item</Link>
                 </div>
-                <ItemList onSelectitem={onSelectitem} items={items} />
+                <ItemList onAddToCart={this.onAddToCart} onSelectitem={onSelectitem} items={items} />
             </div>
         )
     }
