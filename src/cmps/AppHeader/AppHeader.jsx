@@ -12,7 +12,7 @@ const _AppHeader = (props) => {
            </div>
             <ul className="header-nav flex justify-center align-center">
                 <li><NavLink exact to="/" activeClassName="active-nav">Home</NavLink></li>
-                <li class="shopping-cart"> <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon> <NavLink to="/cart" activeClassName="active-nav">Cart</NavLink></li>
+                <li className="shopping-cart"> <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon> <NavLink to="/cart" activeClassName="active-nav">Cart</NavLink></li>
             </ul>
         </div>
     )
