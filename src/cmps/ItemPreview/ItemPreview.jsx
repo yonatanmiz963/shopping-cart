@@ -40,7 +40,7 @@ export function ItemPreview({ item, onAddToCart }) {
                         </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
+                <CardActions>                   
                     <Button onClick={() => onAddToCart(item)} size="small" color="primary">
                         Add To Cart
               </Button>
