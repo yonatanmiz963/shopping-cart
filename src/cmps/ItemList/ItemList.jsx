@@ -7,7 +7,7 @@ import { ItemPreview } from '../ItemPreview'
 export class ItemList extends Component {
 
     render() {
-        const { items, onSelectItem ,onAddToCart } = this.props
+        const { items, onSelectItem, onAddToCart } = this.props
         return (
             items && <div className="list-container" >
                 <ul className="item-list flex">
@@ -17,3 +17,5 @@ export class ItemList extends Component {
         )
     }
 }
+
+
