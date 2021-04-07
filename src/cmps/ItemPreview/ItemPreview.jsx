@@ -1,7 +1,6 @@
 
 // import { Component } from 'react'
 // import { Link } from 'react-router-dom'
-// import './ItemPreview.scss'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -11,50 +10,46 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import './ItemPreview.scss'
 
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
+        maxWidth: 400,
     },
     media: {
-        height: 140,
+        height: 300,
     },
 });
 
 
 export function ItemPreview({ item }) {
     const classes = useStyles();
-
-
-    // const { item } = this.props
     return (
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="Contemplative Reptile"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        Lizard
-                </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button size="small" color="primary">
-                    Share
+        <div className="item-preview">
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image={item.image}
+                        title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            {item.title}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            {'$'+item.price}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    <Button size="small" color="primary">
+                        Add to cart
               </Button>
-                <Button size="small" color="primary">
-                    Learn More
-              </Button>
-            </CardActions>
-        </Card>
+                </CardActions>
+            </Card>
+        </div>
         // <div className="item-preview flex align-center">
         //     <img src={item.image} alt="item" />
         //     <h3>{item.title}</h3>
